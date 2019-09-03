@@ -12,9 +12,33 @@
   border-color: white;
 }
 .title {
+  margin-bottom: 20px;
   font-size: 30px;
   line-height: 35px;
   text-align: center;
   align-items: center;
   color: blueviolet
+}
+.input {
+  align-self: center;
+  margin-top: 10px;
+  padding: 5px;
+  width: 95%;
+  height: auto;
+  border: 1px solid lightgray;
+  border-radius: 2px;
+  color: #424242;
+  font-size: 14px;
+}
+.button {
+  align-self: center;
+  margin: 20px;
+  padding: 5px;
+  width: 70%;
+  height: auto;
+  border: none;
+  background-color: blueviolet;
+  border-radius: 2px;
+  color: white;
+  font-size: 14px;
 }
