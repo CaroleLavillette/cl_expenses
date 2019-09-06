@@ -1,30 +1,39 @@
 import React from "react";
 import Title from "../components/title";
+import ListExpenses from "../components/listExpenses";
 import axios from "axios";
 
 export default class Expenses extends React.Component {
-    state={
-        dataExpense:""
-      }
-      
+    
     render() {
         return (
             <div style={{display: "flex"}}>
                 <div className="bloc">
                     <Title titre="Expenses"></Title>
+                    <div className="divSubTitle">
+                    <span 
+                    className="subTitle"
+                    style={{flex:1}}
+                    >User</span>
+                    <span 
+                    className="subTitle"
+                    style={{flex:3}}
+                    >Decription</span>
+                    <span
+                    className="subTitle" 
+                    style={{flex:1.5}}
+                    >Amount</span>
+                    </div>
+                <div>
+                    <ListExpenses></ListExpenses>
                 </div>
+                </div>
+                
+                
             </div>
         )
     }
-    async componentDidMount() {
-        try {
-            const response = await axios.get("http://localhost:3007/expense");
-            this.setState({dataExpense: response.data})
-           console.log(response.data)
-        } catch (error) { this.setState({ error: true})
-      
-        }
-      }}
+    }
       
       
       

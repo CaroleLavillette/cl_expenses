@@ -17,12 +17,29 @@
   line-height: 35px;
   text-align: center;
   align-items: center;
-  color: blueviolet
+  color: blueviolet;
+  font-weight: 100
 }
 .subTitle {
+  padding: 2px 0;
   margin-bottom: 10px;
   font-size: 15px;
-  font-weight: 800;
+  font-weight: 900;
+  line-height: 18px;
+  color: blueviolet
+}
+.flexGrow {
+  flex: 3;
+}
+.divSubTitle {
+  display: flex;
+  justify-content: space-between;
+}
+.total {
+  padding: 2px 0;
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: 900;
   line-height: 18px;
   color: blueviolet
 }
@@ -37,6 +54,9 @@
   color: #424242;
   font-size: 14px;
 }
+input:focus {
+  border: 1px solid violet;
+}
 .button {
   align-self: center;
   margin: 20px;
@@ -50,9 +70,22 @@
   font-size: 14px;
 }
 .list {
-  font-size: 15px;
+  padding: 2px 0;
+  margin: 0;
+  line-height: 30px;
+  font-size: 13px;
   color: darkorchid;
   border-top: 1px solid lightgrey;
-  border-bottom: 1px solid lightgrey
-
+}
+.list1 {
+  padding: 2px 0;
+  margin: 0;
+  line-height: 30px;
+  background-color: #EEEEEE;
+  font-size: 13px;
+  color: darkorchid;
+  border-top: 1px solid lightgrey;
+}
+.divList {
+   border-bottom: 1px solid lightgray;
 }
