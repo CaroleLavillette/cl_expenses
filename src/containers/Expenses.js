@@ -1,7 +1,6 @@
 import React from "react";
 import Title from "../components/title";
 import ListExpenses from "../components/listExpenses";
-import axios from "axios";
 
 export default class Expenses extends React.Component {
     
@@ -25,7 +24,7 @@ export default class Expenses extends React.Component {
                     >Amount</span>
                     </div>
                 <div>
-                    <ListExpenses></ListExpenses>
+                    <ListExpenses datas ={this.props.datas}></ListExpenses>
                 </div>
                 </div>
                 

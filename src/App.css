@@ -75,7 +75,6 @@ input:focus {
   line-height: 30px;
   font-size: 13px;
   color: darkorchid;
-  border-top: 1px solid lightgrey;
 }
 .list1 {
   padding: 2px 0;
@@ -84,8 +83,8 @@ input:focus {
   background-color: #EEEEEE;
   font-size: 13px;
   color: darkorchid;
-  border-top: 1px solid lightgrey;
 }
 .divList {
-   border-bottom: 1px solid lightgray;
+  border-top: 1px solid lightgray;
+  
 }

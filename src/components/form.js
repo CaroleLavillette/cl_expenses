@@ -1,35 +1,28 @@
 import React from "react";
+import axios from "axios";
 
 export default class Form extends React.Component {
-    render() {
-        return(
-            <form style={{display:"flex", flexDirection:"column"}}>
-                <input 
-                    className="input"
-                    type="text" 
-                    name="user" 
-                    placeholder="User"
-                    minLength="15"/>
-                <input 
-                    className="input"
-                    type="text" 
-                    name="description" 
-                    placeholder="Description"
-                    minLength="25"/>
-                <input 
-                    className="input"
-                    type="number" 
-                    name="amount" 
-                    placeholder="Amount"
-                    />
-                <input
-                    className="button"
-                    type="submit"
-                    name="addExpense"
-                    value="ADD EXPENSE"
-                    />
+state={
+    data:[],
+    error:false
+}
+submitFormHandler = event => {
+    event.preventDefault()}
 
+    render() {
+let datas = this.state.data
+    const users = Object.keys(datas).map(id => ( <option>{datas[id].userName}</option>))
+
+    
+        return(
+            <form onSubmit={this.submitFormHandler}>
+            <select>{users}</select>
             </form>
         )
     }
+async componentDidMount() {
+    const response = await axios.get("http://localhost:3007/user");
+    this.setState({data: response.data});
+    console.log(response.data)
+}
 }
